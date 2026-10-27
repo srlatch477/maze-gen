@@ -6,7 +6,7 @@ body {
     text-align: center;
     color: light-dark(black, white);
     background-color: light-dark(white, black);
-    font-family: 'JetBrains Mono';
+    font-family: 'JetBrains Mono', 'Courier New', 'monospace';
 }
 
 #screen {
