@@ -1,6 +1,6 @@
 # maze-gen
 
-Recursive Backtracker Maze generation demo implemented in TypeScript.
+Recursive Backtracker maze generation demo implemented in TypeScript.
 
 ## How to run
 First, compile the TypeScript code into JavaScript so the browser can run them.
