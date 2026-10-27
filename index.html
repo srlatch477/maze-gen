@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Maze Gen</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta lang="en-us" charset="utf-8">
+    </head>
+    <body>
+        <h1 id="title">Maze Gen</h1>
+        <p>This project is <a class="opensource"><strong>Open Source</strong></a> and is available on the <a href="https://github.com/srlatch477/maze-gen">GitHub repo</a></p>
+        <p><a href="https://en.wikipedia.org/wiki/Maze_generation_algorithm#Recursive_implementation">Recursive Backtracker</a> maze generation algorithm implemented in TypeScript.</p>
+
+        <canvas id="screen" width="800" height="600"></canvas><br>
+
+        <div>
+            <a>Instant</a>
+            <input type="checkbox" id="instantCheckBox">
+            <div id="delayDiv">
+                <a>Delay</a>
+                <input type="number" id="delayInput">
+            </div>
+            <button id="generateButton">Generate</button>
+        </div>
+        <div>
+        <a>Maze Dimensions</a>
+            <input type="number" id="mazeWidth">
+            <input type="number" id="mazeHeight"><br>
+        </div>
+        <div>
+        <a>Canvas Dimensions</a>
+            <input type="number" id="canvasWidth">
+            <input type="number" id="canvasHeight">
+        </div>
+
+        <h2>Tips</h2>
+        <p>To save the maze as PNG, right click the canvas and choose Save Image</p>
+        <p>If your goal is just to get a PNG with a clean looking maze, use the instant option because it draws more precise lines.</p>
+
+        <h2>Details</h2>
+        <p>This demo uses somewhat optimized rendering during animation stage, by only redrawing the current cell.</p>
+        <p>This demo was written in 265 lines of TypeScript.</p>
+        <p>This demo supports both light mode and dark mode, depending on the preffered color scheme of your browser/OS.</p>
+
+        <h2>Resources used</h2>
+        <a href="https://www.youtube.com/watch?v=Y37-gB83HKE">javidx9's "Programming mazes" video</a>
+
+        <script src="dist/core.js" type="module"></script>
+        <script src="dist/ui.js" type="module"></script>
+        <script src="dist/generation.js" type="module"></script>
+        <script src="dist/rendering.js" type="module"></script>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    text-align: center;
+    color: light-dark(black, white);
+    background-color: light-dark(white, black);
+    font-family: 'JetBrains Mono';
+}
+
+#screen {
+    border: 1px solid light-dark(black, white);
+}
+
+.opensource {
+    color: lime;
+}
