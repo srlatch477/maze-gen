@@ -16,3 +16,16 @@ body {
 .opensource {
     color: lime;
 }
+
+button {
+    padding: 5px;
+    cursor: pointer;
+}
+
+#generateButton {
+    background-color: light-dark(lime, darkgreen);
+}
+
+#stopButton {
+    background-color: light-dark(red, darkred);
+}

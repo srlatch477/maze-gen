@@ -2,8 +2,8 @@ import { redrawCell, drawMaze } from "./rendering.js";
 
 export let maze: Maze;
 let stack: (Coordinate | undefined)[];
-let visitedCount: number;
-let visitedTarget: number;
+let visitedCount: number;           // How many cells are already visited
+let visitedTarget: number;          // How many cells should be visited
 let generationInterval: number;
 
 export type Coordinate = {
@@ -144,8 +144,8 @@ export function generateMaze(instant: boolean, delay?: number) {
     
     visit({x: 0, y: 0}, stack, maze, instant, undefined);
 
-    visitedCount = 0;                           // How many cells are already visited
-    visitedTarget = maze.width * maze.height;   // How many cells should be visited
+    visitedCount = 0;                           
+    visitedTarget = maze.width * maze.height;   
 
     if (instant) {
         // Repeat until it returns true, aka finished.
@@ -157,12 +157,17 @@ export function generateMaze(instant: boolean, delay?: number) {
     }
 }
 
+export function stop() {
+    clearInterval(generationInterval);
+}
+
 function iteration(stack: (Coordinate | undefined)[], instant: boolean): boolean | undefined {
     if (visitedCount >= visitedTarget-1) {
         if (instant) {
             return true;
         } else {
             clearInterval(generationInterval);
+            return;
         }
     }
 

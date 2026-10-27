@@ -10,7 +10,7 @@
         <p>This project is <a class="opensource"><strong>Open Source</strong></a> and is available on the <a href="https://github.com/srlatch477/maze-gen">GitHub repo</a></p>
         <p><a href="https://en.wikipedia.org/wiki/Maze_generation_algorithm#Recursive_implementation">Recursive Backtracker</a> maze generation algorithm implemented in TypeScript.</p>
 
-        <canvas id="screen" width="800" height="600"></canvas><br>
+        <canvas id="screen" width="600" height="600"></canvas><br>
 
         <div>
             <a>Instant</a>
@@ -19,7 +19,6 @@
                 <a>Delay</a>
                 <input type="number" id="delayInput">
             </div>
-            <button id="generateButton">Generate</button>
         </div>
         <div>
         <a>Maze Dimensions</a>
@@ -31,6 +30,9 @@
             <input type="number" id="canvasWidth">
             <input type="number" id="canvasHeight">
         </div>
+
+        <button id="generateButton" style="margin-top: 10px;">Generate</button>
+        <button id="stopButton" style="display: none">Stop</button>
 
         <h2>Tips</h2>
         <p>To save the maze as PNG, right click the canvas and choose Save Image</p>
